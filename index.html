@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGMU Lucknow Paramedical CT Scan Syllabus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.4s ease forwards;
+        }
+        #backToTop {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-900 shadow-md lg:sticky lg:top-0 z-50">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div class="flex flex-col items-center gap-4 lg:flex-row lg:items-center lg:gap-6 w-full min-w-0">
+                    <h1 class="text-xl font-semibold text-gray-800 dark:text-slate-100 text-center lg:text-left">Hello reader</h1>
+                    <img
+                        src="https://via.placeholder.com/160x80?text=Institute+Logo"
+                        alt="Institute Logo"
+                        class="h-20 w-auto mx-auto lg:mx-0"
+                    />
+                </div>
+
+                <div class="flex-grow max-w-md min-w-0 w-full">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search lectures..."
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100"
+                    />
+                </div>
+
+                <div class="flex flex-col items-start gap-3 sm:items-end min-w-0 w-full sm:w-auto">
+                    <button
+                        id="themeToggleBtn"
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+                    >
+                        <span id="themeToggleIcon">🌙</span>
+                        <span id="themeToggleText">Dark mode</span>
+                    </button>
+                    <div class="text-right">
+                        <p class="text-sm font-medium text-gray-800 dark:text-slate-200">Credit ~ Anushka Raj</p>
+                        <p class="text-xs text-gray-600 dark:text-slate-400 mt-1">
+                            Help and support
+                            <a href="mailto:feelfreetocontactus11@gmail.com" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-400 underline">
+                                feelfreetocontact11@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 pb-4">
+            <div class="rounded-2xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700 px-5 py-4 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center text-slate-600 dark:text-slate-300 overflow-hidden">
+                <div class="space-y-1 max-w-full">
+                    <div id="searchInfoCount" class="text-sm font-medium text-slate-800 dark:text-slate-100">Showing 300 lectures</div>
+                    <div class="text-sm">
+                        Search tips: try “Lecture 12”, “drive.google.com”, or a topic name.
+                    </div>
+                </div>
+                <div class="text-sm italic text-slate-500 dark:text-slate-400 text-center sm:text-right max-w-full">
+                    “सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः”
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left Column: Common Class -->
+            <section>
+                <div class="bg-white dark:bg-slate-900 rounded-lg shadow-lg p-6 transition-colors duration-300">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-slate-100 mb-6 border-b-2 border-blue-500 pb-3">
+                        DCTT First Year Common Class Notes
+                    </h2>
+                    <div id="leftColumn" class="space-y-2 min-h-[6rem]">
+                        <!-- Dynamically populated with Lecture 1-200 -->
+                    </div>
+                    <div id="leftSectionFooter" class="mt-4 flex justify-center"></div>
+                </div>
+            </section>
+
+            <!-- Right Column: Department Notes -->
+            <section>
+                <div class="bg-white dark:bg-slate-900 rounded-lg shadow-lg p-6 transition-colors duration-300">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-slate-100 mb-6 border-b-2 border-green-500 pb-3">
+                        DCTT First Year Department Notes
+                    </h2>
+                    <div id="rightColumn" class="space-y-2 min-h-[6rem]">
+                        <!-- Dynamically populated with Lecture 1-100 (PDFs 201-300) -->
+                    </div>
+                    <div id="rightSectionFooter" class="mt-4 flex justify-center"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button
+        id="backToTop"
+        class="hidden fixed z-50 rounded-full bg-blue-600 text-white p-3 shadow-lg hover:bg-blue-700 focus:outline-none transition"
+        aria-label="Back to top"
+    >
+        ↑ Top
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
